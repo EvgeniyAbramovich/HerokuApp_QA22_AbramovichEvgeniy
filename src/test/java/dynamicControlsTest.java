@@ -20,7 +20,7 @@ public class dynamicControlsTest {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://the-internet.herokuapp.com/dynamic_controls");
 
         WebElement checkbox = driver.findElement(By.id("checkbox"));
@@ -34,7 +34,7 @@ public class dynamicControlsTest {
         driver.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
         int numberOfElements = driver.findElements(By.id("checkbox")).size();
         Assert.assertEquals(numberOfElements,0);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
         WebElement input = driver.findElement(By.cssSelector("[type=text]"));
