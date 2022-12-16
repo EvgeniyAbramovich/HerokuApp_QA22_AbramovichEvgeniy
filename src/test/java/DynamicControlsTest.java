@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class dynamicControlsTest {
+public class DynamicControlsTest {
 
     @Test
     public void dynamicControlTest() {
@@ -42,6 +42,8 @@ public class dynamicControlsTest {
         buttons.get(1).click();
         wait.until(ExpectedConditions.elementToBeClickable(input));
         Assert.assertEquals(input.isEnabled(),true);
+
+        driver.quit();
 
     }
 
